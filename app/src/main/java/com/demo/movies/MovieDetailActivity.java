@@ -16,7 +16,7 @@ public class MovieDetailActivity extends AppCompatActivity {
 
     private ImageView image;
 
-    private TextView title, date, rating, overview;
+    private TextView title, rating, overview;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -27,7 +27,6 @@ public class MovieDetailActivity extends AppCompatActivity {
         image = (ImageView) findViewById(R.id.poster);
 
         title = (TextView) findViewById(R.id.title);
-        date = (TextView)findViewById(R.id.date);
         overview = (TextView)findViewById(R.id.overview);
         rating = (TextView)findViewById(R.id.rating);
 
@@ -37,7 +36,6 @@ public class MovieDetailActivity extends AppCompatActivity {
 
             Glide.with(this).load("https://image.tmdb.org/t/p/w500/"+ details.getPoster_path()).into(image);
             title.setText(details.getOriginal_title());
-            date.setText(details.getRelease_date());
             rating.setText(Double.toString(details.getVote_average()));
             overview.setText(details.getOverview());
         }

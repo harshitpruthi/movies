@@ -99,6 +99,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                             movieDetails.setOverview(object.getString("overview"));
                             movieDetails.setRelease_date(object.getString("release_date"));
                             movieDetails.setPoster_path(object.getString("poster_path"));
+                            movieDetails.setAdult(Boolean.parseBoolean(object.getString("adult")));
                             movieList.add(movieDetails);
                         }
                         MovieArrayAdapter movieArrayAdapter = new MovieArrayAdapter(MainActivity.this, R.layout.movie_list, movieList);
