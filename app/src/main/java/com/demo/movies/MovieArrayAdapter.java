@@ -44,9 +44,12 @@ public class MovieArrayAdapter extends ArrayAdapter {
 
         TextView movieName = view.findViewById(R.id.textView);
         ImageView image = view.findViewById(R.id.imageView);
+        TextView movieDate = view.findViewById(R.id.textView2);
+        TextView movieAdult = view.findViewById(R.id.textView3);
 
         movieName.setText(details.getOriginal_title());
-
+        movieDate.setText(details.getRelease_date());
+        movieAdult.setText(Boolean.toString(details.isAdult()));
         Glide.with(context).load("https://image.tmdb.org/t/p/w500/"+ details.getPoster_path()).into(image);
 
         return view;

@@ -17,6 +17,16 @@ public class MovieDetails implements Serializable{
 
     private String poster_path;
 
+    private boolean adult;
+
+    public boolean isAdult() {
+        return adult;
+    }
+
+    public void setAdult(boolean adult) {
+        this.adult = adult;
+    }
+
     public String getPoster_path() {
         return poster_path;
     }
